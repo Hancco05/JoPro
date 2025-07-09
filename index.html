@@ -1,11 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Servicios Informáticos Profesionales</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background: #0056b3;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav {
+            background: #333;
+            color: white;
+            padding: 0.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 1rem;
+        }
+
+        .service {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <header>
+        <h1>Servicios Informáticos Profesionales</h1>
+        <p>Soluciones tecnológicas para tu negocio</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section id="inicio">
+        <h2>Bienvenido a nuestros servicios informáticos</h2>
+        <p>Ofrecemos soluciones tecnológicas personalizadas para empresas y particulares, incluyendo mantenimiento,
+            soporte técnico, asesoría y desarrollo de proyectos TI.</p>
+    </section>
+
+    <section id="servicios">
+        <h2>Nuestros Servicios</h2>
+
+        <div class="service">
+            <h3>Mantenimiento Informático</h3>
+            <p>Servicios preventivos y correctivos para mantener tus sistemas funcionando óptimamente.</p>
+        </div>
+
+        <div class="service">
+            <h3>Soporte Técnico</h3>
+            <p>Asistencia remota y presencial para resolver problemas técnicos de hardware y software.</p>
+        </div>
+
+        <div class="service">
+            <h3>Asesoría y Consultoría TI</h3>
+            <p>Ayudantía profesional para la toma de decisiones tecnológicas informadas.</p>
+        </div>
+
+        <div class="service">
+            <h3>Desarrollo de Proyectos TI</h3>
+            <p>Implementación de soluciones tecnológicas personalizadas para tu negocio.</p>
+        </div>
+    </section>
+
+    <section id="nosotros">
+        <h2>Sobre Nosotros</h2>
+        <p>Somos un equipo de profesionales en informática con amplia experiencia en el sector, comprometidos con
+            ofrecer soluciones de calidad.</p>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form>
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Servicios Informáticos Profesionales. Todos los derechos reservados.</p>
+    </footer>
 </body>
+
 </html>

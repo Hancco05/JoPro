@@ -1,1 +1,9 @@
-sitio web de promocion para servicios nuevos de sitio web
+proo/
+├── src/
+├── WebContent/
+│   ├── index.html
+│   ├── css/ (opcional para estilos)
+│   ├── js/ (opcional para JavaScript)
+│   └── WEB-INF/
+│       └── web.xml
+└── build/ (generado automáticamente)
