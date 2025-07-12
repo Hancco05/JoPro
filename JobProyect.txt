@@ -8,4 +8,6 @@ proo/
 │       └── web.xml
 └── build/ (generado automáticamente)
 
-actualizacion dia 10
+actualizacion dia 11
+
+procedimiento para finalizar en siguiente dia
