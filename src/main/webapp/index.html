@@ -5,140 +5,136 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios Informáticos Profesionales</title>
+    <!-- Agregamos Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #333;
+        /* Tus estilos existentes... */
+
+        /* Nuevos estilos para la sección de tecnologías */
+        .tech-icons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
         }
 
-        header {
-            background: #0056b3;
-            color: white;
-            padding: 1rem 0;
+        .tech-icon {
+            font-size: 3rem;
             text-align: center;
+            transition: transform 0.3s;
         }
 
-        nav {
-            background: #333;
-            color: white;
-            padding: 0.5rem;
+        .tech-icon:hover {
+            transform: scale(1.2);
         }
 
-        nav ul {
-            list-style: none;
-            padding: 0;
+        .php {
+            color: #777BB3;
+        }
+
+        .node {
+            color: #68A063;
+        }
+
+        .react {
+            color: #61DAFB;
+        }
+
+        .python {
+            color: #3776AB;
+        }
+
+        .java {
+            color: #007396;
+        }
+
+        .sql {
+            color: #F29111;
+        }
+
+        .powerbi {
+            color: #F2C811;
+        }
+
+        /* Estilos para los enlaces de contacto */
+        .contact-links {
+            margin-top: 30px;
             display: flex;
             justify-content: center;
+            gap: 20px;
         }
 
-        nav ul li {
-            margin: 0 1rem;
-        }
-
-        nav ul li a {
+        .contact-link {
+            padding: 10px 20px;
+            background: #0056b3;
             color: white;
             text-decoration: none;
-        }
-
-        section {
-            padding: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-            margin-top: 1rem;
-        }
-
-        .service {
-            border: 1px solid #ddd;
-            padding: 1rem;
-            margin-bottom: 1rem;
             border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .contact-link:hover {
+            background: #003d7a;
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>Servicios Informáticos Profesionales</h1>
-        <p>Soluciones tecnológicas para tu negocio</p>
-    </header>
+    <!-- Tus secciones existentes... -->
 
-    <nav>
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
-
-    <section id="inicio">
-        <h2>Bienvenido a nuestros servicios informáticos</h2>
-        <p>Ofrecemos soluciones tecnológicas personalizadas para empresas y particulares, incluyendo mantenimiento,
-            soporte técnico, asesoría y desarrollo de proyectos TI.</p>
-    </section>
-
-    <section id="servicios">
-        <h2>Nuestros Servicios</h2>
-
-        <div class="service">
-            <h3>Mantenimiento Informático</h3>
-            <p>Servicios preventivos y correctivos para mantener tus sistemas funcionando óptimamente.</p>
+    <section id="tecnologias">
+        <h2>Tecnologías que Trabajamos</h2>
+        <div class="tech-icons">
+            <div class="tech-icon php" title="PHP">
+                <i class="fab fa-php"></i>
+                <p>PHP</p>
+            </div>
+            <div class="tech-icon node" title="Node.js">
+                <i class="fab fa-node-js"></i>
+                <p>Node.js</p>
+            </div>
+            <div class="tech-icon react" title="React">
+                <i class="fab fa-react"></i>
+                <p>React</p>
+            </div>
+            <div class="tech-icon python" title="Python">
+                <i class="fab fa-python"></i>
+                <p>Python</p>
+            </div>
+            <div class="tech-icon java" title="Java">
+                <i class="fab fa-java"></i>
+                <p>Java</p>
+            </div>
+            <div class="tech-icon sql" title="SQL">
+                <i class="fas fa-database"></i>
+                <p>SQL</p>
+            </div>
+            <div class="tech-icon powerbi" title="Microsoft Power BI">
+                <i class="fas fa-chart-bar"></i>
+                <p>Power BI</p>
+            </div>
         </div>
-
-        <div class="service">
-            <h3>Soporte Técnico</h3>
-            <p>Asistencia remota y presencial para resolver problemas técnicos de hardware y software.</p>
-        </div>
-
-        <div class="service">
-            <h3>Asesoría y Consultoría TI</h3>
-            <p>Ayudantía profesional para la toma de decisiones tecnológicas informadas.</p>
-        </div>
-
-        <div class="service">
-            <h3>Desarrollo de Proyectos TI</h3>
-            <p>Implementación de soluciones tecnológicas personalizadas para tu negocio.</p>
-        </div>
-    </section>
-
-    <section id="nosotros">
-        <h2>Sobre Nosotros</h2>
-        <p>Somos un equipo de profesionales en informática con amplia experiencia en el sector, comprometidos con
-            ofrecer soluciones de calidad.</p>
     </section>
 
     <section id="contacto">
         <h2>Contacto</h2>
-        <form>
-            <div>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-            </div>
-            <div>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div>
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" required></textarea>
-            </div>
-            <button type="submit">Enviar</button>
-        </form>
+        <div class="contact-links">
+            <a href="mailto:tucorreo@ejemplo.com?subject=Consulta%20de%20servicios" class="contact-link">
+                <i class="fas fa-envelope"></i> Enviar Email
+            </a>
+            <a href="https://github.com/tuusuario" target="_blank" class="contact-link">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://www.tusitiodevideojuegos.com" target="_blank" class="contact-link">
+                <i class="fas fa-gamepad"></i> Sitio de Videojuegos
+            </a>
+        </div>
+
+        <!-- Tu formulario existente puede permanecer aquí -->
     </section>
 
-    <footer>
-        <p>&copy; 2023 Servicios Informáticos Profesionales. Todos los derechos reservados.</p>
-    </footer>
+    <!-- Resto de tu HTML... -->
 </body>
 
 </html>
