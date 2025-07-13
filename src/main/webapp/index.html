@@ -92,6 +92,28 @@
             color: #0056b3;
         }
 
+        /* Sección Bienvenida */
+        .welcome-container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .welcome-text {
+            flex: 1;
+        }
+
+        .welcome-gif {
+            flex: 1;
+            text-align: center;
+        }
+
+        .welcome-gif img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
         /* Sección ServiTec */
         .about-us {
             text-align: center;
@@ -283,6 +305,24 @@
             margin-top: 1rem;
             opacity: 0.8;
         }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .welcome-container {
+                flex-direction: column;
+            }
+
+            .welcome-text,
+            .welcome-gif {
+                flex: none;
+                width: 100%;
+            }
+
+            .welcome-gif {
+                order: -1;
+                margin-bottom: 30px;
+            }
+        }
     </style>
 </head>
 
@@ -306,13 +346,26 @@
 
     <section id="inicio">
         <div class="container">
-            <h2>Bienvenido a ServiTec</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto;">
-                Somos tu aliado tecnológico confiable, ofreciendo soluciones personalizadas en mantenimiento,
-                reparación,
-                asesoría y desarrollo de proyectos informáticos. Con un equipo de profesionales altamente capacitados,
-                garantizamos la excelencia en cada servicio que brindamos.
-            </p>
+            <div class="welcome-container">
+                <div class="welcome-text">
+                    <h2>Expertos en Soluciones Digitales</h2>
+                    <p>
+                        En ServiTec nos especializamos en brindar servicios tecnológicos de alta calidad
+                        adaptados a las necesidades de tu empresa. Nuestro equipo de profesionales está
+                        comprometido con ofrecer soluciones innovadoras que impulsen tu negocio hacia
+                        el éxito digital.
+                    </p>
+                    <p style="margin-top: 15px;">
+                        Con años de experiencia en el sector, hemos desarrollado una metodología que
+                        combina conocimiento técnico con un enfoque centrado en el cliente, garantizando
+                        resultados excepcionales en cada proyecto.
+                    </p>
+                </div>
+                <div class="welcome-gif">
+                    <img src="https://media.giphy.com/media/juua9i2c2fA0AIp2iq/giphy.gif" alt="Tecnología animada"
+                        width="400">
+                </div>
+            </div>
         </div>
     </section>
 
@@ -359,26 +412,14 @@
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-img">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Mantenimiento de Ordenadores</h3>
-                        <p>
-                            Servicios preventivos y correctivos para mantener tus equipos en óptimas condiciones.
-                            Incluye limpieza física, optimización de software y actualizaciones.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-img">
                         <i class="fas fa-laptop-medical"></i>
                     </div>
                     <div class="service-content">
                         <h3>Reparación y Revisión</h3>
                         <p>
-                            Diagnóstico y solución de problemas de hardware y software. Recuperación de datos,
-                            cambio de componentes y reparación de fallos eléctricos.
+                            Diagnóstico profesional y solución de problemas de hardware y software.
+                            Recuperación de datos, cambio de componentes y reparación de fallos eléctricos
+                            con garantía de calidad.
                         </p>
                     </div>
                 </div>
@@ -390,8 +431,9 @@
                     <div class="service-content">
                         <h3>Asesorías Informáticas</h3>
                         <p>
-                            Orientación profesional para la adquisición de equipos, implementación de sistemas
-                            y optimización de recursos tecnológicos en tu empresa.
+                            Orientación profesional personalizada para la adquisición de equipos,
+                            implementación de sistemas y optimización de recursos tecnológicos
+                            en tu empresa.
                         </p>
                     </div>
                 </div>
@@ -403,8 +445,9 @@
                     <div class="service-content">
                         <h3>Proyectos Informáticos</h3>
                         <p>
-                            Desarrollo de software a medida, implementación de redes, sistemas de seguridad
-                            informática y soluciones tecnológicas integrales.
+                            Desarrollo de software a medida, implementación de redes corporativas,
+                            sistemas de seguridad informática y soluciones tecnológicas integrales
+                            para tu negocio.
                         </p>
                     </div>
                 </div>
