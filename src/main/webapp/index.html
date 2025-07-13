@@ -4,41 +4,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios Informáticos Profesionales</title>
-    <!-- Agregamos Font Awesome para iconos -->
+    <title>ServiTec - Servicios Informáticos Profesionales</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Tus estilos existentes... */
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        /* Nuevos estilos para la sección de tecnologías */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #0056b3, #003366);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Navegación */
+        nav {
+            background-color: #333;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Secciones */
+        section {
+            padding: 4rem 0;
+        }
+
+        section:nth-child(even) {
+            background-color: white;
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            color: #0056b3;
+        }
+
+        /* Sección ServiTec */
+        .about-us {
+            text-align: center;
+        }
+
+        .about-us h3 {
+            font-size: 1.5rem;
+            margin: 1.5rem 0;
+            color: #333;
+        }
+
+        .about-card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .about-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 2rem;
+        }
+
+        /* Tecnologías */
         .tech-icons {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
-            margin: 30px 0;
+            gap: 30px;
+            margin: 40px 0;
         }
 
         .tech-icon {
-            font-size: 3rem;
+            font-size: 3.5rem;
             text-align: center;
             transition: transform 0.3s;
+            width: 120px;
+        }
+
+        .tech-icon p {
+            margin-top: 10px;
+            font-size: 1rem;
+            font-weight: 600;
         }
 
         .tech-icon:hover {
-            transform: scale(1.2);
+            transform: scale(1.1);
         }
 
         .php {
             color: #777BB3;
-        }
-
-        .node {
-            color: #68A063;
-        }
-
-        .react {
-            color: #61DAFB;
         }
 
         .python {
@@ -53,88 +165,386 @@
             color: #F29111;
         }
 
-        .powerbi {
-            color: #F2C811;
+        .react {
+            color: #61DAFB;
         }
 
-        /* Estilos para los enlaces de contacto */
-        .contact-links {
-            margin-top: 30px;
+        .node {
+            color: #68A063;
+        }
+
+        /* Servicios */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-img {
+            height: 200px;
+            background-color: #0056b3;
             display: flex;
+            align-items: center;
             justify-content: center;
-            gap: 20px;
+            color: white;
+            font-size: 4rem;
         }
 
-        .contact-link {
-            padding: 10px 20px;
+        .service-content {
+            padding: 1.5rem;
+        }
+
+        .service-content h3 {
+            margin-bottom: 1rem;
+            color: #0056b3;
+        }
+
+        /* Contacto */
+        .contact-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 3rem;
+        }
+
+        .contact-card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #0056b3;
+        }
+
+        .contact-btn {
+            display: inline-block;
             background: #0056b3;
             color: white;
-            text-decoration: none;
+            padding: 0.8rem 1.5rem;
             border-radius: 5px;
+            text-decoration: none;
+            margin-top: 1rem;
             transition: background 0.3s;
         }
 
-        .contact-link:hover {
+        .contact-btn:hover {
             background: #003d7a;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 1rem 0;
+        }
+
+        .footer-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #61DAFB;
+        }
+
+        .copyright {
+            margin-top: 1rem;
+            opacity: 0.8;
         }
     </style>
 </head>
 
 <body>
-    <!-- Tus secciones existentes... -->
+    <header>
+        <div class="container">
+            <h1>ServiTec</h1>
+            <p>Soluciones tecnológicas integrales para tu negocio</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servitec">ServiTec</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#tecnologias">Tecnologías</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section id="inicio">
+        <div class="container">
+            <h2>Bienvenido a ServiTec</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto;">
+                Somos tu aliado tecnológico confiable, ofreciendo soluciones personalizadas en mantenimiento,
+                reparación,
+                asesoría y desarrollo de proyectos informáticos. Con un equipo de profesionales altamente capacitados,
+                garantizamos la excelencia en cada servicio que brindamos.
+            </p>
+        </div>
+    </section>
+
+    <section id="servitec">
+        <div class="container">
+            <h2>¿Por qué elegir ServiTec?</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <i class="fas fa-bullseye" style="font-size: 3rem; color: #0056b3;"></i>
+                    <h3>Misión</h3>
+                    <p>
+                        Proporcionar soluciones tecnológicas de calidad que optimicen los procesos de nuestros clientes,
+                        mediante un servicio personalizado, innovador y con los más altos estándares profesionales.
+                    </p>
+                </div>
+
+                <div class="about-card">
+                    <i class="fas fa-eye" style="font-size: 3rem; color: #0056b3;"></i>
+                    <h3>Visión</h3>
+                    <p>
+                        Ser reconocidos como líderes en servicios informáticos, destacando por nuestra capacidad de
+                        adaptación
+                        a las nuevas tecnologías y por construir relaciones a largo plazo con nuestros clientes.
+                    </p>
+                </div>
+
+                <div class="about-card">
+                    <i class="fas fa-star" style="font-size: 3rem; color: #0056b3;"></i>
+                    <h3>Valores</h3>
+                    <p>
+                        <strong>Integridad:</strong> Honestidad en cada acción<br>
+                        <strong>Innovación:</strong> Soluciones creativas<br>
+                        <strong>Compromiso:</strong> Con los resultados<br>
+                        <strong>Excelencia:</strong> Calidad en cada detalle
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios">
+        <div class="container">
+            <h2>Nuestros Servicios</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Mantenimiento de Ordenadores</h3>
+                        <p>
+                            Servicios preventivos y correctivos para mantener tus equipos en óptimas condiciones.
+                            Incluye limpieza física, optimización de software y actualizaciones.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-img">
+                        <i class="fas fa-laptop-medical"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Reparación y Revisión</h3>
+                        <p>
+                            Diagnóstico y solución de problemas de hardware y software. Recuperación de datos,
+                            cambio de componentes y reparación de fallos eléctricos.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-img">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Asesorías Informáticas</h3>
+                        <p>
+                            Orientación profesional para la adquisición de equipos, implementación de sistemas
+                            y optimización de recursos tecnológicos en tu empresa.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-img">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Proyectos Informáticos</h3>
+                        <p>
+                            Desarrollo de software a medida, implementación de redes, sistemas de seguridad
+                            informática y soluciones tecnológicas integrales.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="tecnologias">
-        <h2>Tecnologías que Trabajamos</h2>
-        <div class="tech-icons">
-            <div class="tech-icon php" title="PHP">
-                <i class="fab fa-php"></i>
-                <p>PHP</p>
-            </div>
-            <div class="tech-icon node" title="Node.js">
-                <i class="fab fa-node-js"></i>
-                <p>Node.js</p>
-            </div>
-            <div class="tech-icon react" title="React">
-                <i class="fab fa-react"></i>
-                <p>React</p>
-            </div>
-            <div class="tech-icon python" title="Python">
-                <i class="fab fa-python"></i>
-                <p>Python</p>
-            </div>
-            <div class="tech-icon java" title="Java">
-                <i class="fab fa-java"></i>
-                <p>Java</p>
-            </div>
-            <div class="tech-icon sql" title="SQL">
-                <i class="fas fa-database"></i>
-                <p>SQL</p>
-            </div>
-            <div class="tech-icon powerbi" title="Microsoft Power BI">
-                <i class="fas fa-chart-bar"></i>
-                <p>Power BI</p>
+        <div class="container">
+            <h2>Tecnologías que Trabajamos</h2>
+            <div class="tech-icons">
+                <div class="tech-icon php">
+                    <i class="fab fa-php"></i>
+                    <p>PHP</p>
+                </div>
+                <div class="tech-icon python">
+                    <i class="fab fa-python"></i>
+                    <p>Python</p>
+                </div>
+                <div class="tech-icon java">
+                    <i class="fab fa-java"></i>
+                    <p>Java</p>
+                </div>
+                <div class="tech-icon sql">
+                    <i class="fas fa-database"></i>
+                    <p>SQL</p>
+                </div>
+                <div class="tech-icon react">
+                    <i class="fab fa-react"></i>
+                    <p>React</p>
+                </div>
+                <div class="tech-icon node">
+                    <i class="fab fa-node-js"></i>
+                    <p>Node.js</p>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="contacto">
-        <h2>Contacto</h2>
-        <div class="contact-links">
-            <a href="mailto:tucorreo@ejemplo.com?subject=Consulta%20de%20servicios" class="contact-link">
-                <i class="fas fa-envelope"></i> Enviar Email
-            </a>
-            <a href="https://github.com/tuusuario" target="_blank" class="contact-link">
-                <i class="fab fa-github"></i> GitHub
-            </a>
-            <a href="https://www.tusitiodevideojuegos.com" target="_blank" class="contact-link">
-                <i class="fas fa-gamepad"></i> Sitio de Videojuegos
-            </a>
-        </div>
+        <div class="container">
+            <h2>Contacto</h2>
+            <div class="contact-links">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Correo Electrónico</h3>
+                    <p>Contáctanos para consultas o cotizaciones</p>
+                    <a href="mailto:contacto@servitec.com?subject=Consulta%20de%20servicios" class="contact-btn">
+                        <i class="fas fa-paper-plane"></i> Enviar Email
+                    </a>
+                </div>
 
-        <!-- Tu formulario existente puede permanecer aquí -->
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Nuestro Sitio de Videojuegos</h3>
+                    <p>Visita nuestra pasión por los videojuegos</p>
+                    <a href="https://www.servitec-games.com" target="_blank" class="contact-btn">
+                        <i class="fas fa-external-link-alt"></i> Visitar Sitio
+                    </a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3>Nuestro GitHub</h3>
+                    <p>Explora nuestros proyectos de código abierto</p>
+                    <a href="https://github.com/servitec-solutions" target="_blank" class="contact-btn">
+                        <i class="fab fa-github"></i> Ver Repositorios
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Resto de tu HTML... -->
+    <footer>
+        <div class="container">
+            <h3>ServiTec - Soluciones Informáticas</h3>
+            <div class="footer-links">
+                <a href="mailto:contacto@servitec.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/servitec-solutions" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.servitec-games.com" target="_blank"><i class="fas fa-gamepad"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p class="copyright">
+                &copy; 2023 ServiTec. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript para efectos interactivos
+        document.addEventListener('DOMContentLoaded', function () {
+            // Animación suave al hacer clic en enlaces del menú
+            document.querySelectorAll('nav a').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Efecto de aparición gradual al hacer scroll
+            const fadeElements = document.querySelectorAll('.about-card, .service-card, .contact-card');
+
+            function checkFade() {
+                fadeElements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+
+                    if (elementTop < windowHeight - 100) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            }
+
+            // Configura inicialmente los elementos para la animación
+            fadeElements.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            });
+
+            window.addEventListener('scroll', checkFade);
+            window.addEventListener('load', checkFade);
+        });
+    </script>
 </body>
 
 </html>
