@@ -10,4 +10,4 @@ proo/
 
 actualizacion dia 11
 
-procedimiento para finalizar en siguiente dia
+procedimiento para finalizar en siguiente dia final
